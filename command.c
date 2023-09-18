@@ -30,7 +30,7 @@ char *findCommand(const char *command, char *executable_path)
 	}
 	_strncpy(path_copy, path_env, sizeof(path_copy) - 1);
 	path_copy[sizeof(path_copy) - 1] = '\0';
-	path_token = strtok(path_copy, ":");
+	path_token = _strtok(path_copy, ":");
 	while (path_token != NULL)
 	{
 		size_t path_len = _strlen(path_token);
@@ -44,7 +44,7 @@ char *findCommand(const char *command, char *executable_path)
 			if (access(executable_path, X_OK) == 0)
 				return (_strdup(executable_path));
 		}
-		path_token = strtok(NULL, ":");
+		path_token = _strtok(NULL, ":");
 	}
 	return (NULL);
 }

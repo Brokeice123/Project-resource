@@ -10,11 +10,11 @@ void splitArguments(char *input, char *args[])
 {
 	int arg_count = 0;
 
-	args[arg_count] = strtok(input, " ");
+	args[arg_count] = _strtok(input, " ");
 	while (args[arg_count] != NULL)
 	{
 		arg_count++;
-		args[arg_count] = strtok(NULL, " ");
+		args[arg_count] = _strtok(NULL, " ");
 	}
 
 	args[arg_count] = NULL;

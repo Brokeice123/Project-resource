@@ -36,5 +36,6 @@ int _strlen(const char *s);
 char *_strchr(const char *s, char c);
 int _atoi(char *s);
 int _strncmp(const char *s1, const char *s2, size_t n);
+char *_strtok(char *line, char *delim);
 
 #endif
